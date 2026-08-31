@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCP-YHM-001 - 基金會文檔</title>
+    <style>
+        body { 
+            font-family: "Courier New", Courier, monospace; 
+            background-color: #f4f4f4; 
+            color: #333; 
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-left: 5px solid #b00; /* 左側紅線裝飾 */
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h1 { color: #b00; border-bottom: 2px solid #b00; padding-bottom: 10px; }
+        h2 { color: #333; margin-top: 30px; }
+        .warning {
+            background-color: #eee;
+            border: 1px solid #999;
+            padding: 15px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .back-link { display: block; margin-bottom: 20px; color: #666; text-decoration: none; }
+        .back-link:hover { color: #b00; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- 返回首頁的按鈕 -->
+    <a href="index.html" class="back-link">← 返回基金會資料庫首頁</a>
+
+    <!-- ⚠️ 這裡開始是你的內容，請自由修改白色的字 -->
+    
+    <h1>SCP-YHM-001: [世界]</h1>
+    
+    <div class="warning">警告：未授權人員禁止查看此文件。</div>
+
+    <h2>特殊收容措施</h2>
+    <p>
+        [該物體為特殊現象，無法收容。]
+    </p>
+
+    <h2>描述</h2>
+    <p>
+        [它是每一個生物存在的位置，它就在你我之中，它擁有著無限的可能性，各種你所見的都在其中，包括人類。]
+    </p>
+
+    <h2>事件</h2>
+
+    <p>
+        [許多人曾挑戰它的權威，大多數者最終付出了生命代價，但是我們會勸導每一位人珍愛生命-----即■■■■事情後的總結。]
+    </p>
+
+    <p>
+
+        [珍惜生命真的很重要，它是我們人類繼續存活下去的唯一辦法。-----O5-1]
+    </p>
+    <!-- ⚠️ 內容修改到此結束 -->
+
+</div>
+
+</body>
+</html>
