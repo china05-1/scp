@@ -1,213 +1,84 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人档案数据库 | 机密访问</title>
+    <title>SCP 基金會 - 機密檔案庫</title>
     <style>
-        /* 全局重置与基础样式 */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            background-color: #1a1a1a; /* 深色背景 */
-            color: #d4d4d4; /* 浅灰文字 */
-            font-family: 'Courier New', Courier, monospace; /* 等宽字体营造终端感 */
-            line-height: 1.6;
-            padding: 20px;
-        }
-
-        /* 顶部警告横幅 */
-        .warning-banner {
-            background-color: #8b0000; /* 深红色警告 */
-            color: #fff;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            font-family: "Courier New", Courier, monospace;
             text-align: center;
-            padding: 10px;
-            font-weight: bold;
-            border: 1px solid #ff4444;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            padding: 20px;
+            margin: 0;
         }
-
-        /* 主容器 */
+        h1 {
+            color: #b00;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
         .container {
-            max-width: 900px;
+            max-width: 600px;
             margin: 0 auto;
+        }
+        /* 這是連結按鈕的樣式 */
+        .scp-link {
+            display: block;
+            background-color: #1a1a1a;
             border: 1px solid #444;
-            padding: 30px;
-            background-color: #222;
-            box-shadow: 0 0 15px rgba(0,0,0,0.8);
-        }
-
-        /* 头部标题 */
-        header {
-            border-bottom: 2px solid #8b0000;
-            padding-bottom: 15px;
-            margin-bottom: 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header h1 {
-            font-size: 28px;
-            color: #fff;
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-        }
-
-        .logo-text {
-            font-size: 14px;
-            color: #8b0000;
-            font-weight: bold;
-        }
-
-        /* 档案条目样式 */
-        .file-entry {
-            border: 1px solid #333;
-            background-color: #262626;
             padding: 20px;
-            margin-bottom: 20px;
-            transition: border-color 0.3s ease;
-        }
-
-        .file-entry:hover {
-            border-color: #8b0000; /* 悬停时显示深红色边框 */
-        }
-
-        .file-header {
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px dashed #555;
-            padding-bottom: 10px;
             margin-bottom: 15px;
-        }
-
-        .file-id {
-            font-size: 20px;
-            font-weight: bold;
+            text-decoration: none;
             color: #fff;
+            transition: all 0.3s ease;
+            text-align: left;
         }
-
-        /* SCP 经典等级盒子样式 */
-        .clearance-level {
-            padding: 5px 10px;
-            color: #fff;
+        .scp-link:hover {
+            background-color: #2a2a2a;
+            border-color: #b00;
+            transform: translateX(5px);
+        }
+        .scp-number {
+            color: #b00;
             font-weight: bold;
-            font-size: 12px;
-            text-transform: uppercase;
+            font-size: 1.2em;
         }
-
-        .level-safe { background-color: #2e7d32; } /* 绿色 Safe */
-        .level-euclid { background-color: #f9a825; color: #000; } /* 黄色 Euclid */
-        .level-keter { background-color: #c62828; } /* 红色 Keter */
-
-        /* 内容区域 */
-        .file-content h3 {
-            color: #bbb;
-            font-size: 16px;
-            margin-bottom: 8px;
-            border-left: 3px solid #8b0000;
-            padding-left: 10px;
+        .scp-title {
+            display: block;
+            margin-top: 5px;
+            font-size: 0.9em;
+            color: #aaa;
         }
-
-        .file-content p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-
-        /* 数据删除/黑条效果 */
-        .redacted {
-            background-color: #111;
-            color: #111; /* 文字颜色与背景相同，实现“黑条”效果 */
-            padding: 0 5px;
-            cursor: help;
-            transition: color 0.3s;
-        }
-        
-        /* 鼠标长按或悬停时可选配 reveal 效果，这里保持绝对机密不显示 */
-        
-        /* 底部 */
-        footer {
-            margin-top: 40px;
-            text-align: center;
-            font-size: 12px;
-            color: #666;
-            border-top: 1px solid #333;
-            padding-top: 15px;
+        .footer {
+            margin-top: 50px;
+            font-size: 0.8em;
+            color: #555;
         }
     </style>
 </head>
 <body>
 
-    <!-- 顶部警告 -->
-    <div class="warning-banner">
-        ⚠ 警告：仅限授权人员访问 / 非法入侵将被追溯并清除 ⚠
-    </div>
-
     <div class="container">
-        <header>
-            <h1>ARCHIVE DATABASE</h1>
-            <div class="logo-text">Secure. Contain. Protect.</div>
-        </header>
+        <h1>SCP 基金會資料庫</h1>
+        
+        <!-- 👇 這裡是檔案列表，你可以複製整個 <a>...</a> 區塊來新增更多檔案 -->
+        
+        <!-- 這是第一篇文章的連結 -->
+        <a href="scp-001.html" class="scp-link">
+            <span class="scp-number">SCP-001</span>
+            <span class="scp-title">點擊查看完整檔案內容</span>
+        </a>
 
-<!-- 档案列表区域 -->
-        <main>
-            
-<!-- 档案 001 -->
-<article class="file-entry">
-<div class="file-header">
-<span class="file-id">档案编号: 001</span>
-<span class="clearance-level level-euclid">Euclid 等级</span>
-                </div>
-<div class="file-content">
-<h3>特殊收容措施：</h3>
-<p>档案 001 必须被保存在一个标准的加密数字保险库中。任何未经授权的访问尝试都将触发自动警报，并向 <span class="redacted">站点管理员</span> 发送报告。</p>
-                    
-<h3>描述：</h3>
-<p>档案 001 是一个能够根据访问者心理状态动态生成内容的网页实体。初次发现于 <span class="redacted">██████</span> 的废弃服务器中。尽管其表现出一定的友好性，但严禁对其源代码进行未经审查的修改。</p>
-                </div>
-            </article>
+        <!-- 未來如果有第二篇，就複製上面這段，把 href 改成 scp-002.html -->
 
-<!-- 档案 002 -->
-<article class="file-entry">
-<div class="file-header">
-<span class="file-id">档案编号: 002</span>
-<span class="clearance-level level-safe">Safe 等级</span>
-                </div>
-<div class="file-content">
-                    <h3>特殊收容措施：</h3>
-<p>由于其性质无害，档案 002 可以被放置在公共展示区，但需配备监控摄像头。</p>
-                    
-<h3>描述：</h3>
-<p>档案 002 是一台看似普通的咖啡机。然而，无论何时按下启动键，它都会产出一种能够完美恢复饮用者精神状态的黑色液体。实验记录表明，该液体含有微量的 <span class="redacted">█████</span> 元素。</p>
-                </div>
-            </article>
-
-<!-- 档案 003 -->
-<article class="file-entry">
-<div class="file-header">
-<span class="file-id">档案编号: 003</span>
-<span class="clearance-level level-keter">Keter 等级</span>
-                </div>
-<div class="file-content">
-<h3>特殊收容措施：</h3>
-<p>极度危险。档案 003 目前无法被完全收容。所有试图接触该档案的人员必须配备四级以上精神防护盾。若发现其活跃迹象，立即执行 <span class="redacted">████████</span> 协议。</p>
-                    
-<h3>描述：</h3>
-<p>档案 003 是一个不断自我复制并吞噬周围网络带宽的异常代码集合。它最初表现为一个简单的死循环，但在吸收了足够数据后，开始表现出类似初级意识的特征。</p>
-                </div>
-            </article>
-
-        </main>
-
-        <footer>
-<p>未经授权泄露此文档将导致纪律处分乃至处决。</p>
-<p>© 2026 个人档案数据库基金会 | 仅供测试用途</p>
-        </footer>
+        <div class="footer">
+            <p>SECURE. CONTAIN. PROTECT.</p>
+            <p>警告：未經授權存取機密檔案將導致立即處決。</p>
+        </div>
     </div>
 
 </body>
