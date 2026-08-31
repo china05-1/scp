@@ -3,72 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCP-YHM-001 - 基金會文檔</title>
+    <title>SCP-YHM-001 - [世界]</title>
     <style>
-        body { 
-            font-family: "Courier New", Courier, monospace; 
-            background-color: #f4f4f4; 
-            color: #333; 
+        /* --- 這裡是樣式設定 (CSS) --- */
+        body {
+            background-color: #111; /* 深黑色背景 */
+            color: #ddd; /* 灰白色文字，閱讀不傷眼 */
+            font-family: "Courier New", Courier, monospace; /* 打字機字體，更有機密感 */
             line-height: 1.6;
             padding: 20px;
-        }
-        .container {
             max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-left: 5px solid #b00; /* 左側紅線裝飾 */
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            margin: 0 auto; /* 讓內容置中 */
         }
-        h1 { color: #b00; border-bottom: 2px solid #b00; padding-bottom: 10px; }
-        h2 { color: #333; margin-top: 30px; }
+
+        h1 {
+            border-bottom: 2px solid #555;
+            padding-bottom: 10px;
+            color: #fff;
+        }
+
+        h2 {
+            color: #a33; /* 暗紅色的小標題 */
+            margin-top: 30px;
+        }
+
         .warning {
-            background-color: #eee;
-            border: 1px solid #999;
+            background-color: #300; /* 深紅色背景 */
+            color: #f55; /* 亮紅色文字 */
+            border: 1px solid #f00;
             padding: 15px;
             font-weight: bold;
             text-align: center;
             margin-bottom: 20px;
         }
-        .back-link { display: block; margin-bottom: 20px; color: #666; text-decoration: none; }
-        .back-link:hover { color: #b00; }
+
+        .item-number, .object-class {
+            font-weight: bold;
+            color: #aaa;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify; /* 文字對齊 */
+        }
+
+        /* 返回按鈕樣式 */
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #69c;
+            text-decoration: none;
+            border: 1px solid #69c;
+            padding: 5px 10px;
+        }
+        .back-link:hover {
+            background-color: #69c;
+            color: #000;
+        }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <!-- 返回首頁的按鈕 -->
-    <a href="index.html" class="back-link">← 返回基金會資料庫首頁</a>
+    <div class="container">
+        <!-- 返回首頁的按鈕 -->
+        <a href="index.html" class="back-link">← 返回基金會資料庫</a>
 
-    <!-- ⚠️ 這裡開始是你的內容，請自由修改白色的字 -->
-    
-    <h1>SCP-YHM-001: [世界]</h1>
-    
-    <div class="warning">警告：未授權人員禁止查看此文件。</div>
+        <!-- ⚠️ 這裡開始是你的內容 -->
+        
+        <div class="warning">警告：未授權人員禁止查看此檔案</div>
 
-    <h2>特殊收容措施</h2>
-    <p>
-        [該物體為特殊現象，無法收容。]
-    </p>
+        <h1>SCP-YHM-001：[世界]</h1>
 
-    <h2>描述</h2>
-    <p>
-        [它是每一個生物存在的位置，它就在你我之中，它擁有著無限的可能性，各種你所見的都在其中，包括人類。]
-    </p>
+        <p><span class="item-number">項目編號：SCP-YHM-001</span> SCP-YHM-001</p>
+        <p><span class="object-class">項目等級：Archon</span> Keter (凱特爾)</p>
 
-    <h2>事件</h2>
+        <h2>特殊收容措施</h2>
+        <p>
+            該物體被無法收容。
+        </p>
 
-    <p>
-        [許多人曾挑戰它的權威，大多數者最終付出了生命代價，但是我們會勸導每一位人珍愛生命-----即■■■■事情後的總結。]
-    </p>
+        <h2>描述</h2>
+        <p>
+            SCP-YHM-001就在你我之間，隨處可見。
+        </p>
+        <p>
+            當個體意識到 SCP-YHM-001 的存在時，該個體通常已經處於極度開放之中。
+        </p>
 
-    <p>
+        <h2>事件記錄 YHM-001-A</h2>
+        <p>
+            許多人曾挑戰它的權威，但大多數者最終付出了生命的代價。
+        </p>
+        <p>
+            [珍惜生命真的很重要，它是我們人類繼續存活下去的唯一希望。] —— O5-1
+        </p>
 
-        [珍惜生命真的很重要，它是我們人類繼續存活下去的唯一辦法。-----O5-1]
-    </p>
-    <!-- ⚠️ 內容修改到此結束 -->
-
-</div>
+        <!-- ⚠️ 內容修改到此結束 -->
+    </div>
 
 </body>
 </html>
