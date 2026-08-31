@@ -3,82 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCP 基金會 - 機密檔案庫</title>
+    <title>SCP Foundation Database</title>
     <style>
         body {
-            background-color: #0d0d0d;
-            color: #e0e0e0;
-            font-family: "Courier New", Courier, monospace;
-            text-align: center;
+            background-color: #1a1a1a; /* 深灰背景 */
+            color: #d4d4d4; /* 浅灰文字 */
+            font-family: 'Courier New', Courier, monospace; /* 打字机字体 */
+            line-height: 1.6;
             padding: 20px;
             margin: 0;
         }
-        h1 {
-            color: #b00;
+
+        /* 顶部警告横幅 */
+        .warning-banner {
+            background-color: #8b0000; /* 深红 */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            border: 1px solid #ff4444;
+            margin-bottom: 30px;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            border-bottom: 2px solid #333;
-            padding-bottom: 20px;
-            margin-bottom: 40px;
+            letter-spacing: 1px;
         }
         .container {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
-        }
-        /* 這是連結按鈕的樣式 */
-        .scp-link {
-            display: block;
-            background-color: #1a1a1a;
-            border: 1px solid #444;
+            border: 1px solid #333;
             padding: 20px;
+            background-color: #222;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #8b0000;
+            padding-bottom: 10px;
+            color: #fff;
+        }
+
+        /* 文档列表区域 */
+        .doc-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .doc-item {
+            background-color: #2a2a2a;
             margin-bottom: 15px;
+            padding: 15px;
+            border-left: 4px solid #8b0000;
+            transition: transform 0.2s;
+        }
+
+        .doc-item:hover {
+            transform: translateX(5px);
+            background-color: #333;
+        }
+
+        .doc-link {
             text-decoration: none;
             color: #fff;
-            transition: all 0.3s ease;
-            text-align: left;
-        }
-        .scp-link:hover {
-            background-color: #2a2a2a;
-            border-color: #b00;
-            transform: translateX(5px);
-        }
-        .scp-number {
-            color: #b00;
-            font-weight: bold;
             font-size: 1.2em;
-        }
-        .scp-title {
+            font-weight: bold;
             display: block;
-            margin-top: 5px;
-            font-size: 0.9em;
-            color: #aaa;
+            margin-bottom: 5px;
         }
-        .footer {
-            margin-top: 50px;
-            font-size: 0.8em;
-            color: #555;
+
+        .doc-desc {
+            color: #888;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
 
+    <!-- 顶部红色警告 -->
+    <div class="warning-banner">
+        ⚠️ 警告：仅限授权人员访问 / 非法入侵将被追踪
+    </div>
+
     <div class="container">
-        <h1>SCP 基金會資料庫</h1>
-        
-        <!-- 👇 這裡是檔案列表，你可以複製整個 <a>...</a> 區塊來新增更多檔案 -->
-        
-        <!-- 這是第一篇文章的連結 -->
-        <a href="scp-001.html" class="scp-link">
-            <span class="scp-number">SCP-001</span>
-            <span class="scp-title">點擊查看完整檔案內容</span>
-        </a>
+        <header>
+            <h1>SCP FOUNDATION ARCHIVE</h1>
+            <p style="text-align: center; color: #666;">Secure. Contain. Protect.</p>
+        </header>
 
-        <!-- 未來如果有第二篇，就複製上面這段，把 href 改成 scp-002.html -->
+        <hr style="border-color: #444; margin: 30px 0;">
 
-        <div class="footer">
-            <p>SECURE. CONTAIN. PROTECT.</p>
-            <p>警告：未經授權存取機密檔案將導致立即處決。</p>
-        </div>
+        <h2>📂 可用文档 / Available Documents</h2>
+        
+        <!-- 👇👇👇 这里是你要找的链接部分 👇👇👇 -->
+        <ul class="doc-list">
+            <li class="doc-item">
+                <a href="scp-YHM-001.html" class="doc-link">
+                    SCP-YHM-001 [世界]
+                </a>
+                <div class="doc-desc">
+                    项目等级：Keter | 描述：关于世界本质的异常档案。
+                </div>
+            </li>
+            
+            <!-- 以后有新文档就加在这里 -->
+        </ul>
+
+        <footer style="margin-top: 50px; text-align: center; font-size: 0.8em; color: #555;">
+            &copy; SCP Foundation Database. All rights reserved.
+        </footer>
     </div>
 
 </body>
